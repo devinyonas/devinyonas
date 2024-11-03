@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
   stacked: ^3.4.0
   stacked_services: ^1.1.0
 
@@ -31,7 +33,7 @@ flutter:
   fonts:
     - family: jacquard
       fonts:
-        - asset: assets/fonts/Jacquard12/Jacquard12-Regular.ttf
+        - asset: assets/fonts/Jacquard_12/Jacquard12-Regular.ttf
     - family: pixelify
       fonts:
         - asset: assets/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf

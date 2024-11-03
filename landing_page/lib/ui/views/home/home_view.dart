@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:landing_page/ui/common/text_style.dart';
 import 'package:stacked/stacked.dart';
 import 'package:landing_page/ui/common/app_colors.dart';
 import 'package:landing_page/ui/common/ui_helpers.dart';
@@ -26,9 +27,40 @@ class HomeView extends StackedView<HomeViewModel> {
                 verticalSpaceLarge,
                 Column(
                   children: [
-                    const Text(
+                    ...FontWeight.values.map(
+                      (weight) => Text(
+                        'This text has weight $weight',
+                        style: TextStyle(
+                          fontVariations: [
+                            FontVariation(
+                                'wght', ((weight.index + 1) * 100).toDouble())
+                          ],
+                        ),
+                      ),
+                    ),
+                    Text(
                       'Hello, STACKED!',
-                      style: TextStyle(
+                      style: UITextStyle.pixelify.copyWith(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Text(
+                      'Hello, STACKED!',
+                      style: UITextStyle.pixelify.copyWith(
+                        fontSize: 40,
+                      ),
+                    ),
+                    Text(
+                      'hello, stacked!',
+                      style: UITextStyle.jacquard.copyWith(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Text(
+                      'Hello, STACKED!',
+                      style: UITextStyle.headlineLarge.copyWith(
                         fontSize: 35,
                         fontWeight: FontWeight.w900,
                       ),
