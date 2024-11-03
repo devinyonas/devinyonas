@@ -3,8 +3,6 @@ analyzer:
   exclude:
     - lib/l10n/*
     - "**/*.g.dart"
-    - "**/*.form.dart"
-    - lib/app/app.*.dart
 linter:
   rules:
     public_member_api_docs: false
